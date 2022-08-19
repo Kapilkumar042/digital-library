@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="donate-book.css">
+    <link rel="shortcut icon" href="assets/images/bmlogo.png" type="image/x-icon">
+
+    <title>Donate Books</title>
+</head>
+<body>
+    <div class="home"></div>
+    <div class="container">
+        <h2 style="text-align: center; padding: 10px 0 10px 0; color: chocolate;">DONATE BOOKS</h2>
+        <div class="card card-custom">
+            <div class="card-body">
+                <form method="post" autocomplete="off" name="google-sheet">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputEmail4">First Name</label>
+              <input type="text" class="form-control" id="inputEmail4" name="firstname" placeholder="First Name" required>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="inputPassword4">Last Name</label>
+              <input type="text" class="form-control" id="inputPassword4" name="lastname" placeholder="Last Name" required>
+            </div>
+          </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputEmail4">Email</label>
+            <input type="email" class="form-control" id="inputEmail4" name="useremail" placeholder="Email" required>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputPassword4">Contact</label>
+            <input type="number" class="form-control" id="inputPassword4" name="phonenumber" placeholder="Contact" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputAddress">Address</label>
+          <input type="text" class="form-control" id="inputAddress" name="address" placeholder="town/city/village" required>
+        </div>
+        <div class="form-group">
+          <label for="inputAddress2">Address 2</label>
+          <input type="text" class="form-control" id="inputAddress2" name="address2" placeholder="permanent address">
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputCity">City</label>
+            <input type="text" class="form-control" name="city" id="inputCity" required>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputState">State</label>
+            <select id="inputState" class="form-control" name="state">
+              <option selected>Choose...</option>
+              <option>Andhra Pradesh</option>
+              <option>Arunachal Pradesh</option>
+              <option>Assam</option>
+              <option>Bihar</option>
+              <option>Chhattisgarh</option>
+              <option>Goa</option>
+              <option>Gujarat</option>
+              <option>Haryana</option>
+              <option>Himachal Pradesh</option>
+              <option>Jammu and Kashmir</option>
+              <option>Jharkhand</option>
+              <option>Karnataka</option>
+              <option>Kerala</option>
+              <option>Madhya Pradesh</option>
+              <option>Maharashtra</option>
+              <option>Manipur</option>
+              <option>Meghalaya</option>
+              <option>Mizoram</option>
+              <option>Nagaland</option>
+              <option>Odisha</option>
+              <option>Punjab</option>
+              <option>Rajasthan</option>
+              <option>Sikkim</option>
+              <option>Tamil Nadu</option>
+              <option>Telangana</option>
+              <option>Tripura</option>
+              <option>Uttar Pradesh</option>
+              <option>Uttarakhand</option>
+              <option>West Bengal</option>
+            </select>
+          </div>
+          <div class="form-group col-md-2">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck" name="check" required>
+            <label class="form-check-label" for="gridCheck">
+              Agree to terms and conditions
+            </label>
+          </div>
+        </div>
+        <a href="https://forms.gle/edRmcNGbGGPjHV92A" type="submit" target="_blank" class="btn btn-primary a-btn"> Donate</a>
+        <button type="submit" class="btn btn-primary"><a style="text-decoration: none; color: white;" href="index.html">Back to Home</a></button>
+        <button type="submit" class="btn btn-primary"><a style="text-decoration: none; color: white;" href="./ebook.html">Open Store</a></button>
+    
+      </form>
+    </div>
+</div>
+</div>
+
+
+<script type="text/javascript">
+
+
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbznus1o4fddLRERMoZAGsfQbBQN_fFIiiw2kuXt1tYNBaFfRMXHQ_tsWhU4bnxO46UX/exec'
+          const form = document.forms['google-sheet']
+        
+          form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+              .then(response => alert("You have successfully submitted."))
+              .catch(error => console.error('Error!', error.message))
+          })
+</script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
+
+

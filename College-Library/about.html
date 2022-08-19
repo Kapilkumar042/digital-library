@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+.cont a{
+    text-decoration: none;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+.card img{
+  border-radius: 50%;
+  width: 200px;
+  margin-left: 100px;
+  height: 200px;
+}
+
+footer{
+  position: relative;
+  width: 100%;
+  height: 10vh;
+  background-color: #474e5d;
+  color: white;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+.content{
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.social-icon{
+  padding-top: 8px;
+  font-size: 30px;
+  padding-right: 12px;
+}
+
+.fa{
+  color: #fff;
+  text-decoration: none;
+  margin: 8px;
+}
+.fa:hover{
+  color: aqua;
+  font-size: 2.5rem;
+}
+
+.text-content{
+  padding-top: 17px;
+  padding-left: 14px;
+}
+
+.homeback{
+  color: #fff;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border-radius: 8px;
+  padding: 10px;
+  float: left;
+}
+
+.homeback:hover{
+  background-color: aquamarine;
+  color: black;
+  border: none;
+          
+}
+
+@media only screen and (max-width: 600px){
+  .content{
+    display: block;
+  }
+  .text-content{
+    /* display: inline; */
+    font-size: 18px;
+    text-align: center;
+    /* margin: 0px auto 25px auto; */
+    padding-bottom: 10px;
+  }
+  footer{
+    width: 100%;
+    height: 8vh;
+  }
+  .social-icon{
+    display: none;
+  }
+  .about-section{
+    display: block;
+  }
+  .big-heading{
+    display: block;
+    text-align: center;
+    font-size: 30px;
+  }
+
+ 
+}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="shortcut icon" href="assets/images/bmlogo.png" type="image/x-icon">
+
+</head>
+<body>
+
+<div class="about-section">
+  <a href="./index.html" class="homeback">Go Back Home</a>
+  <div class="big-heading">
+  
+    <h1>About Our Team</h1>
+  </div>
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <!-- <img src="/assets/logos/exx1.jpg" alt="Jane" style="width:200px"> -->
+      <div class="container">
+        <h2>Kapil Kumar</h2>
+        <p class="title">BCA 3th YEAR STUDENT</p>
+        <p>I passionate in coding and web development.
+            I am student in BCA 3rd Year, I have basic knowledge of Data strcture & algrothem. I have intermediate knowlege of Java programming language.: .</p>
+        <p>kapilkumarsinghofficial@gmail.com</p>
+        <p class="cont"><a href="mailto:kapilkumarsinghofficial@gmail.com.com" class="button" target="_blank">Contact</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <!-- <img src="/w3images/team2.jpg" alt="Mike" style="width:100%"> -->
+      <div class="container">
+        <h2>Anuj Kumar</h2>
+        <p class="title">BCA 3th YEAR STUDENT</p>
+        <p>I passionate in coding and web development.
+            I am student in BCA 3rd Year, I have basic knowledge of Data strcture & algrothem. I have intermediate knowlege of Java programming language.: .</p>
+        <p>kapilkumarsinghofficial@gmail.com</p>
+        <p class="cont"><a href="mailto:someone@example.com" class="button">Contact</a></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <!-- <img src="/w3images/team3.jpg" alt="John" style="width:100%"> -->
+      <div class="container">
+        <h2>Devesh Kumar</h2>
+        <p class="title">BCA 3th YEAR STUDENT</p>
+        <p>I passionate in coding and web development.
+            I am student in BCA 3rd Year, I have basic knowledge of Data strcture & algrothem. I have intermediate knowlege of Java programming language.: .</p>
+        <p>kapilkumarsinghofficial@gmail.com</p>
+        <p class="cont"><a href="mailto:someone@example.com" class="button">Contact</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+<footer class="fotters" >  
+  <div class="content">
+    <div class="text-content">
+      <p >Copyright © College Library By Kapil</p>
+    </div>
+    <div class="social-icon">
+      <a href="#" class="fa fa-facebook"></a>
+      <a href="#" class="fa fa-twitter"></a>
+      <a href="https://www.youtube.com/channel/UC3F8ex-5U_DRv9OnXYeSRxg/videos" target="_blank" class="fa fa-youtube"></a>
+      <a href="#" class="fa fa-instagram"></a>
+      <a href="https://www.linkedin.com/in/kapilkumar047/" target="_blank" class="fa fa-linkedin "></a>
+    </div>
+  </div>   
+
+</footer>
+</html>
